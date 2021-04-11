@@ -5,6 +5,20 @@
 @include fontFace("SegoeUI-Bold", "../assets/Segoe/Bold");
 
 
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
 body {
     height: 100vh;
     margin: 0;
@@ -29,11 +43,11 @@ body {
 
     p {
         color: rgba($text-color, $alpha: .87);
+        opacity: .7;
         line-height: 24px;
     }
 
     @media screen and (min-width: $breakpoint-medium) {
-        @include box-sizing(border-box);
         display: flex;
         justify-content: center;
         padding-top: 74px;
@@ -111,7 +125,6 @@ body {
     margin: 26px auto 0 auto;
 
     button {
-        @include box-sizing(border-box);
         border: none;
         border-top-right-radius: 8px;
         border-bottom-right-radius: 8px;
@@ -122,11 +135,13 @@ body {
         font-family: 'SegoeUI-Bold', sans-serif;
         letter-spacing: 2.8px;
         font-size: 14px;
-        cursor: pointer;
+
+        &:active {
+            background-color: darken($color: $accent-color, $amount: 15%);
+        }
     }
 
     input[type='email'] {
-        @include box-sizing(border-box);
         border-top-left-radius: 8px;
         border-bottom-left-radius: 8px;
         border: none;
@@ -178,8 +193,19 @@ body {
 .social__icon {
     display: inline-block;
     width: 30px;
-    padding-left: 20px;
+    margin-left: 20px;
 }
+
+.social__icon--path {
+    fill: $text-color;
+    transition: fill .3s;
+
+    &:hover {
+        fill: darken($text-color, 25%);
+    }
+}
+
+
 
 .sr-only {
     display: block;
