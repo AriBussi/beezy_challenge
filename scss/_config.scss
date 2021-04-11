@@ -1,0 +1,27 @@
+// __________ Mixins
+@mixin fontFace($family, $src) {
+    @font-face {
+        font-family: $family;
+        src: url('#{$src}.woff') format('woff');
+    }
+}
+
+@mixin box-sizing($box-model) {
+    -webkit-box-sizing: $box-model;
+    -moz-box-sizing: $box-model;
+    box-sizing: $box-model;
+}
+
+// __________ Variables
+
+// breakpoints
+$breakpoint-medium: 600px;
+$breakpoint-large: 992px;
+
+// colors
+$text-color: #FFF;
+$accent-color: #f05638;
+$background-darkest: rgb(22, 46, 80);
+$background-dark: rgb(48, 68, 139);
+$background-light: rgb(72, 102, 193);
+$background-lightest: rgb(81, 125, 216);

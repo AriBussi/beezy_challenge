@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Contoso</title>
+  </head>
+
+  <body>
+    <aside class="social">
+      <a href="#" class="social__icon">
+        <img src="./assets/ic_email.svg" alt="email" />
+      </a>
+      <a href="#" class="social__icon">
+        <img src="./assets/ic_twitter.svg" alt="tweet" />
+      </a>
+    </aside>
+
+    <main class="showcase">
+      <section>
+        <img
+          class="showcase__image--desktop"
+          src="./assets/phones-desktop/iphones-final.png"
+          srcset="
+            ./assets/phones-desktop/iphones-final@2x.png 2x,
+            ./assets/phones-desktop/iphones-final@3x.png 3x
+          "
+          alt="Contoso app displayed in mobile phone"
+        />
+      </section>
+
+      <div class="showcase__content">
+        <img
+          class="showcase__logo"
+          src="./assets/contoso.svg"
+          alt="Contoso logo"
+        />
+        <img
+          class="showcase__image--mobile"
+          src="./assets/phones-mobile/phones-mobile.png"
+          srcset="
+            ./assets/phones-mobile/phones-mobile@2x.png 2x,
+            ./assets/phones-mobile/phones-mobile@3x.png 3x
+          "
+          alt="Contoso app displayed in mobile phone"
+        />
+        <h1>
+          The best of Slack & WhatsApp combined and natively built in Office 365
+        </h1>
+        <p>
+          Get early access to Contoso, the new messaging app for professionals
+        </p>
+        <form class="showcase__form" action="" method="post">
+          <label for="email" class="sr-only">E-mail:</label>
+          <input
+            type="email"
+            id="email"
+            name="o365_email"
+            placeholder="Your O365 email"
+          />
+          <button type="button">SEND</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

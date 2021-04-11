@@ -1,0 +1,11 @@
+{
+  "name": "contoso_beezy_challenge",
+  "version": "1.0.0",
+  "description": "CSS code challenge - Beezy/Ari Bussi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ari Bussi",
+  "license": "ISC"
+}

@@ -1,0 +1,190 @@
+@import 'config';
+
+@include fontFace("SegoeUI", "../assets/Segoe/Regular");
+@include fontFace("SegoeUI-Light", "../assets/Segoe/Light");
+@include fontFace("SegoeUI-Bold", "../assets/Segoe/Bold");
+
+
+body {
+    height: 100vh;
+    margin: 0;
+    color: $text-color;
+    font-family: 'SegoeUI', sans-serif;
+}
+
+
+.showcase {
+    height: 100%;
+    padding: 0 20px;
+    text-align: center;
+    background: $background-dark;
+    background: linear-gradient(155deg, $background-darkest 0%, $background-dark 40%, $background-light 80%, $background-lightest 100%);
+
+    h1 {
+        font-family: 'SegoeUI-Light', sans-serif;
+        font-weight: lighter;
+        line-height: 28px;
+        font-size: 1.5em;
+    }
+
+    p {
+        color: rgba($text-color, $alpha: .87);
+        line-height: 24px;
+    }
+
+    @media screen and (min-width: $breakpoint-medium) {
+        @include box-sizing(border-box);
+        display: flex;
+        justify-content: center;
+        padding-top: 74px;
+        background: linear-gradient(90deg, $background-darkest 0%, $background-light 100%);
+        background: linear-gradient(to right, $background-darkest 0%, $background-dark 60%, $background-light 100%);
+
+    }
+
+    @media screen and (min-width: $breakpoint-large) {
+        max-height: 760px;
+
+
+        h1 {
+            font-size: 3em;
+            line-height: 58px;
+        }
+
+        p {
+            font-size: 1.5em;
+            line-height: 34px;
+        }
+    }
+}
+
+
+.showcase__logo {
+    width: 132px;
+    margin: 40px auto 20px auto;
+
+    @media screen and (min-width: $breakpoint-medium) {
+        margin-top: 90px;
+        margin-bottom: 0;
+    }
+}
+
+.showcase__image--desktop {
+    display: none;
+
+    @media screen and (min-width: $breakpoint-medium) {
+        display: block;
+        max-width: 30vw;
+    }
+
+    @media screen and (min-width: $breakpoint-large) {
+        display: block;
+        max-width: unset;
+    }
+}
+
+.showcase__image--mobile {
+    display: block;
+    margin: 0 auto;
+
+    @media screen and (min-width: $breakpoint-medium) {
+        display: none;
+    }
+}
+
+.showcase__content {
+    max-width: 360px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $breakpoint-medium) {
+        max-width: 600px;
+        margin: 0;
+        margin-left: 8vw;
+        text-align: left;
+    }
+}
+
+.showcase__form {
+    display: flex;
+    height: 45px;
+    max-width: 280px;
+    margin: 26px auto 0 auto;
+
+    button {
+        @include box-sizing(border-box);
+        border: none;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        height: 100%;
+        min-width: 92px;
+        background-color: $accent-color;
+        color: $text-color;
+        font-family: 'SegoeUI-Bold', sans-serif;
+        letter-spacing: 2.8px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    input[type='email'] {
+        @include box-sizing(border-box);
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border: none;
+        height: 100%;
+        padding: 0;
+        padding-left: 20px;
+        overflow: hidden;
+        color: #9fa3a7;
+        font-family: 'SegoeUI', sans-serif;
+        font-size: 1em;
+
+        &:invalid {
+            outline: $accent-color;
+        }
+    }
+
+
+    @media screen and (min-width: $breakpoint-medium) {
+        margin-left: 0;
+    }
+
+    @media screen and (min-width: $breakpoint-large) {
+        margin-top: 48px;
+        max-width: 420px;
+        height: 55px;
+
+        input[type='email'] {
+            font-size: 1.25em;
+        }
+
+        button {
+            min-width: 122px;
+        }
+    }
+
+}
+
+.social {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    display: none;
+
+    @media screen and (min-width: $breakpoint-medium) {
+        display: block;
+    }
+}
+
+.social__icon {
+    display: inline-block;
+    width: 30px;
+    padding-left: 20px;
+}
+
+.sr-only {
+    display: block;
+    width: 1px;
+    height: 1px;
+    visibility: hidden;
+    overflow: hidden;
+}
