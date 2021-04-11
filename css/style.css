@@ -10,6 +10,20 @@
   font-family: "SegoeUI-Bold";
   src: url("../assets/Segoe/Bold.woff") format("woff");
 }
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
 body {
   height: 100vh;
   margin: 0;
@@ -32,13 +46,11 @@ body {
 }
 .showcase p {
   color: rgba(255, 255, 255, 0.87);
+  opacity: 0.7;
   line-height: 24px;
 }
 @media screen and (min-width: 600px) {
   .showcase {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
     display: flex;
     justify-content: center;
     padding-top: 74px;
@@ -117,9 +129,6 @@ body {
   margin: 26px auto 0 auto;
 }
 .showcase__form button {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   border: none;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -130,12 +139,11 @@ body {
   font-family: "SegoeUI-Bold", sans-serif;
   letter-spacing: 2.8px;
   font-size: 14px;
-  cursor: pointer;
+}
+.showcase__form button:active {
+  background-color: #cc2e0f;
 }
 .showcase__form input[type=email] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   border: none;
@@ -184,7 +192,15 @@ body {
 .social__icon {
   display: inline-block;
   width: 30px;
-  padding-left: 20px;
+  margin-left: 20px;
+}
+
+.social__icon--path {
+  fill: #FFF;
+  transition: fill 0.3s;
+}
+.social__icon--path:hover {
+  fill: #bfbfbf;
 }
 
 .sr-only {
