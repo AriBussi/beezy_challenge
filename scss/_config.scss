@@ -6,6 +6,7 @@
     }
 }
 
+
 // __________ Variables
 
 // breakpoints
@@ -19,3 +20,61 @@ $background-darkest: rgb(22, 46, 80);
 $background-dark: rgb(48, 68, 139);
 $background-light: rgb(72, 102, 193);
 $background-lightest: rgb(81, 125, 216);
+
+
+
+// __________ Global
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    color: $text-color;
+    font-family: 'SegoeUI', sans-serif;
+}
+
+
+h1 {
+    font-family: 'SegoeUI-Light', sans-serif;
+    font-weight: lighter;
+    line-height: 28px;
+    font-size: 1.5em;
+
+    @media screen and (min-width: $breakpoint-large) {
+        font-size: 3em;
+        line-height: 58px;
+    }
+}
+
+p {
+    color: rgba($text-color, $alpha: .87);
+    opacity: .7;
+    line-height: 24px;
+
+    @media screen and (min-width: $breakpoint-large) {
+        font-size: 1.5em;
+        line-height: 34px;
+    }
+}
+
+
+.sr-only {
+    display: block;
+    width: 1px;
+    height: 1px;
+    visibility: hidden;
+    overflow: hidden;
+}

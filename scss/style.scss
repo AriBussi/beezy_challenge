@@ -5,61 +5,34 @@
 @include fontFace("SegoeUI-Bold", "../assets/Segoe/Bold");
 
 
-html {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
+// __________ Social Icons
+.social {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    display: none;
 
-*,
-*:before,
-*:after {
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: inherit;
-}
-
-body {
-    height: 100vh;
-    margin: 0;
-    color: $text-color;
-    font-family: 'SegoeUI', sans-serif;
-}
-
-
-h1 {
-    font-family: 'SegoeUI-Light', sans-serif;
-    font-weight: lighter;
-    line-height: 28px;
-    font-size: 1.5em;
-
-    @media screen and (min-width: $breakpoint-large) {
-        font-size: 3em;
-        line-height: 58px;
+    @media screen and (min-width: $breakpoint-medium) {
+        display: block;
     }
 }
 
-p {
-    color: rgba($text-color, $alpha: .87);
-    opacity: .7;
-    line-height: 24px;
+.social__icon {
+    display: inline-block;
+    width: 25px;
+    margin-left: 20px;
+}
 
-    @media screen and (min-width: $breakpoint-large) {
-        font-size: 1.5em;
-        line-height: 34px;
+.social__icon--path {
+    fill: $text-color;
+    transition: fill .3s;
+
+    &:hover {
+        fill: darken($text-color, 25%);
     }
 }
 
-
-.sr-only {
-    display: block;
-    width: 1px;
-    height: 1px;
-    visibility: hidden;
-    overflow: hidden;
-}
-
-
+// __________ Showcase
 .showcase {
     height: 100%;
     padding: 0 20px;
@@ -83,17 +56,7 @@ p {
     }
 }
 
-
-.showcase__logo {
-    width: 132px;
-    margin: 40px auto 20px auto;
-
-    @media screen and (min-width: $breakpoint-medium) {
-        margin-top: 90px;
-        margin-bottom: 0;
-    }
-}
-
+// Showcase Phone Images
 .showcase__image {
     &--desktop {
         display: none;
@@ -119,7 +82,7 @@ p {
     }
 }
 
-
+// Showcase Content
 .showcase__content {
     max-width: 360px;
     margin: 0 auto;
@@ -132,6 +95,19 @@ p {
     }
 }
 
+// Logo
+.showcase__logo {
+    width: 132px;
+    margin: 40px auto 20px auto;
+
+    @media screen and (min-width: $breakpoint-medium) {
+        margin-top: 90px;
+        margin-bottom: 0;
+    }
+}
+
+
+// Form
 .showcase__form {
     display: flex;
     height: 45px;
@@ -157,6 +133,7 @@ p {
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     border: none;
+    outline: none;
     height: 100%;
     padding: 0;
     padding-left: 20px;
@@ -175,7 +152,9 @@ p {
 }
 
 .showcase__form--btn {
+    cursor: pointer; // presentational only, to be removed when the button is active
     border: none;
+    outline: none;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     height: 100%;
@@ -192,31 +171,5 @@ p {
 
     @media screen and (min-width: $breakpoint-large) {
         min-width: 122px;
-    }
-}
-
-.social {
-    position: absolute;
-    right: 40px;
-    top: 40px;
-    display: none;
-
-    @media screen and (min-width: $breakpoint-medium) {
-        display: block;
-    }
-}
-
-.social__icon {
-    display: inline-block;
-    width: 30px;
-    margin-left: 20px;
-}
-
-.social__icon--path {
-    fill: $text-color;
-    transition: fill .3s;
-
-    &:hover {
-        fill: darken($text-color, 25%);
     }
 }

@@ -1,15 +1,3 @@
-@font-face {
-  font-family: "SegoeUI";
-  src: url("../assets/Segoe/Regular.woff") format("woff");
-}
-@font-face {
-  font-family: "SegoeUI-Light";
-  src: url("../assets/Segoe/Light.woff") format("woff");
-}
-@font-face {
-  font-family: "SegoeUI-Bold";
-  src: url("../assets/Segoe/Bold.woff") format("woff");
-}
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -64,6 +52,44 @@ p {
   overflow: hidden;
 }
 
+@font-face {
+  font-family: "SegoeUI";
+  src: url("../assets/Segoe/Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "SegoeUI-Light";
+  src: url("../assets/Segoe/Light.woff") format("woff");
+}
+@font-face {
+  font-family: "SegoeUI-Bold";
+  src: url("../assets/Segoe/Bold.woff") format("woff");
+}
+.social {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  .social {
+    display: block;
+  }
+}
+
+.social__icon {
+  display: inline-block;
+  width: 25px;
+  margin-left: 20px;
+}
+
+.social__icon--path {
+  fill: #FFF;
+  transition: fill 0.3s;
+}
+.social__icon--path:hover {
+  fill: #bfbfbf;
+}
+
 .showcase {
   height: 100%;
   padding: 0 20px;
@@ -83,17 +109,6 @@ p {
 @media screen and (min-width: 992px) {
   .showcase {
     max-height: 760px;
-  }
-}
-
-.showcase__logo {
-  width: 132px;
-  margin: 40px auto 20px auto;
-}
-@media screen and (min-width: 600px) {
-  .showcase__logo {
-    margin-top: 90px;
-    margin-bottom: 0;
   }
 }
 
@@ -135,6 +150,17 @@ p {
   }
 }
 
+.showcase__logo {
+  width: 132px;
+  margin: 40px auto 20px auto;
+}
+@media screen and (min-width: 600px) {
+  .showcase__logo {
+    margin-top: 90px;
+    margin-bottom: 0;
+  }
+}
+
 .showcase__form {
   display: flex;
   height: 45px;
@@ -160,6 +186,7 @@ p {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   border: none;
+  outline: none;
   height: 100%;
   padding: 0;
   padding-left: 20px;
@@ -178,7 +205,9 @@ p {
 }
 
 .showcase__form--btn {
+  cursor: pointer;
   border: none;
+  outline: none;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
   height: 100%;
@@ -196,32 +225,6 @@ p {
   .showcase__form--btn {
     min-width: 122px;
   }
-}
-
-.social {
-  position: absolute;
-  right: 40px;
-  top: 40px;
-  display: none;
-}
-@media screen and (min-width: 600px) {
-  .social {
-    display: block;
-  }
-}
-
-.social__icon {
-  display: inline-block;
-  width: 30px;
-  margin-left: 20px;
-}
-
-.social__icon--path {
-  fill: #FFF;
-  transition: fill 0.3s;
-}
-.social__icon--path:hover {
-  fill: #bfbfbf;
 }
 
 /*# sourceMappingURL=style.css.map */
