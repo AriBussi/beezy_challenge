@@ -34,7 +34,7 @@
 
 // __________ Showcase
 .showcase {
-    height: 100%;
+    min-height: 100%;
     padding: 0 20px;
     text-align: center;
     background: $background-dark;
@@ -45,17 +45,14 @@
     @media screen and (min-width: $breakpoint-small) {
         display: flex;
         justify-content: center;
-        padding-top: 20px;
+        padding-top: 74px;
         background: linear-gradient(90deg, $background-darkest 0%, $background-light 100%);
         background: linear-gradient(to right, $background-darkest 0%, $background-dark 60%, $background-light 100%);
 
     }
 
-    @media screen and (min-width: $breakpoint-small) and (min-width: 768px) {
-        padding-top: 74px;
-    }
-
-    @media screen and (min-width: $breakpoint-medium) and (min-width: 768px) {
+    @media screen and (min-width: $breakpoint-medium) {
+        min-height: unset;
         max-height: 760px;
     }
 }
@@ -90,6 +87,7 @@
 .showcase__content {
     max-width: 360px;
     margin: 0 auto;
+    padding-bottom: 40px;
 
     @media screen and (min-width: $breakpoint-small) {
         max-width: 600px;
@@ -108,13 +106,9 @@
     width: 132px;
     margin: 40px auto 20px auto;
 
-    @media screen and (min-width: $breakpoint-small) {
-        margin-top: 60px;
-        margin-bottom: 0;
-    }
-
-    @media screen and (min-width: $breakpoint-small) and (min-height: 768px) {
+    @media screen and (min-width: $breakpoint-small) and (orientation: portrait) {
         margin-top: 90px;
+        margin-bottom: 0;
     }
 }
 
