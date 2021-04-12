@@ -45,13 +45,17 @@
     @media screen and (min-width: $breakpoint-small) {
         display: flex;
         justify-content: center;
-        padding-top: 74px;
+        padding-top: 20px;
         background: linear-gradient(90deg, $background-darkest 0%, $background-light 100%);
         background: linear-gradient(to right, $background-darkest 0%, $background-dark 60%, $background-light 100%);
 
     }
 
-    @media screen and (min-width: $breakpoint-medium) {
+    @media screen and (min-width: $breakpoint-small) and (min-width: 768px) {
+        padding-top: 74px;
+    }
+
+    @media screen and (min-width: $breakpoint-medium) and (min-width: 768px) {
         max-height: 760px;
     }
 }
@@ -105,8 +109,12 @@
     margin: 40px auto 20px auto;
 
     @media screen and (min-width: $breakpoint-small) {
-        margin-top: 90px;
+        margin-top: 60px;
         margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $breakpoint-small) and (min-height: 768px) {
+        margin-top: 90px;
     }
 }
 

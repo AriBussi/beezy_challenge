@@ -55,23 +55,23 @@ body {
 h1 {
     font-family: 'SegoeUI-Light', sans-serif;
     font-weight: lighter;
-    line-height: 28px;
-    font-size: 1.5em;
+    line-height: 1.75rem;
+    font-size: 1.5rem;
 
     @media screen and (min-width: $breakpoint-large) {
-        font-size: 3em;
-        line-height: 58px;
+        font-size: 3rem;
+        line-height: 3.65rem;
     }
 }
 
 p {
     color: rgba($text-color, $alpha: .87);
     opacity: .7;
-    line-height: 24px;
+    line-height: 1.5rem;
 
     @media screen and (min-width: $breakpoint-large) {
-        font-size: 1.5em;
-        line-height: 34px;
+        font-size: 1.5rem;
+        line-height: 2.1rem;
     }
 }
 
