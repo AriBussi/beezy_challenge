@@ -27,6 +27,39 @@ body {
 }
 
 
+h1 {
+    font-family: 'SegoeUI-Light', sans-serif;
+    font-weight: lighter;
+    line-height: 28px;
+    font-size: 1.5em;
+
+    @media screen and (min-width: $breakpoint-large) {
+        font-size: 3em;
+        line-height: 58px;
+    }
+}
+
+p {
+    color: rgba($text-color, $alpha: .87);
+    opacity: .7;
+    line-height: 24px;
+
+    @media screen and (min-width: $breakpoint-large) {
+        font-size: 1.5em;
+        line-height: 34px;
+    }
+}
+
+
+.sr-only {
+    display: block;
+    width: 1px;
+    height: 1px;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+
 .showcase {
     height: 100%;
     padding: 0 20px;
@@ -34,18 +67,7 @@ body {
     background: $background-dark;
     background: linear-gradient(155deg, $background-darkest 0%, $background-dark 40%, $background-light 80%, $background-lightest 100%);
 
-    h1 {
-        font-family: 'SegoeUI-Light', sans-serif;
-        font-weight: lighter;
-        line-height: 28px;
-        font-size: 1.5em;
-    }
 
-    p {
-        color: rgba($text-color, $alpha: .87);
-        opacity: .7;
-        line-height: 24px;
-    }
 
     @media screen and (min-width: $breakpoint-medium) {
         display: flex;
@@ -58,17 +80,6 @@ body {
 
     @media screen and (min-width: $breakpoint-large) {
         max-height: 760px;
-
-
-        h1 {
-            font-size: 3em;
-            line-height: 58px;
-        }
-
-        p {
-            font-size: 1.5em;
-            line-height: 34px;
-        }
     }
 }
 
@@ -83,28 +94,31 @@ body {
     }
 }
 
-.showcase__image--desktop {
-    display: none;
-
-    @media screen and (min-width: $breakpoint-medium) {
-        display: block;
-        max-width: 30vw;
-    }
-
-    @media screen and (min-width: $breakpoint-large) {
-        display: block;
-        max-width: unset;
-    }
-}
-
-.showcase__image--mobile {
-    display: block;
-    margin: 0 auto;
-
-    @media screen and (min-width: $breakpoint-medium) {
+.showcase__image {
+    &--desktop {
         display: none;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            display: block;
+            max-width: 30vw;
+        }
+
+        @media screen and (min-width: $breakpoint-large) {
+            display: block;
+            max-width: unset;
+        }
+    }
+
+    &--mobile {
+        display: block;
+        margin: 0 auto;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            display: none;
+        }
     }
 }
+
 
 .showcase__content {
     max-width: 360px;
@@ -124,40 +138,6 @@ body {
     max-width: 280px;
     margin: 26px auto 0 auto;
 
-    button {
-        border: none;
-        border-top-right-radius: 8px;
-        border-bottom-right-radius: 8px;
-        height: 100%;
-        min-width: 92px;
-        background-color: $accent-color;
-        color: $text-color;
-        font-family: 'SegoeUI-Bold', sans-serif;
-        letter-spacing: 2.8px;
-        font-size: 14px;
-
-        &:active {
-            background-color: darken($color: $accent-color, $amount: 15%);
-        }
-    }
-
-    input[type='email'] {
-        border-top-left-radius: 8px;
-        border-bottom-left-radius: 8px;
-        border: none;
-        height: 100%;
-        padding: 0;
-        padding-left: 20px;
-        overflow: hidden;
-        color: #9fa3a7;
-        font-family: 'SegoeUI', sans-serif;
-        font-size: 1em;
-
-        &:invalid {
-            outline: $accent-color;
-        }
-    }
-
 
     @media screen and (min-width: $breakpoint-medium) {
         margin-left: 0;
@@ -167,16 +147,52 @@ body {
         margin-top: 48px;
         max-width: 420px;
         height: 55px;
-
-        input[type='email'] {
-            font-size: 1.25em;
-        }
-
-        button {
-            min-width: 122px;
-        }
     }
 
+}
+
+.showcase__form--input {
+    display: block;
+    width: 75%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border: none;
+    height: 100%;
+    padding: 0;
+    padding-left: 20px;
+    overflow: hidden;
+    color: #9fa3a7;
+    font-family: 'SegoeUI', sans-serif;
+    font-size: 1em;
+
+    &:invalid {
+        outline: $accent-color;
+    }
+
+    @media screen and (min-width: $breakpoint-large) {
+        font-size: 1.25em;
+    }
+}
+
+.showcase__form--btn {
+    border: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    height: 100%;
+    min-width: 92px;
+    background-color: $accent-color;
+    color: $text-color;
+    font-family: 'SegoeUI-Bold', sans-serif;
+    letter-spacing: 2.8px;
+    font-size: 14px;
+
+    &:active {
+        background-color: darken($color: $accent-color, $amount: 15%);
+    }
+
+    @media screen and (min-width: $breakpoint-large) {
+        min-width: 122px;
+    }
 }
 
 .social {
@@ -203,14 +219,4 @@ body {
     &:hover {
         fill: darken($text-color, 25%);
     }
-}
-
-
-
-.sr-only {
-    display: block;
-    width: 1px;
-    height: 1px;
-    visibility: hidden;
-    overflow: hidden;
 }
