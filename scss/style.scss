@@ -75,7 +75,7 @@
 
     &--mobile {
         display: block;
-        margin: 0 auto;
+        margin: 0 auto 20px auto;
 
         @media screen and (min-width: $breakpoint-small) {
             display: none;
@@ -106,7 +106,7 @@
     width: 132px;
     margin: 40px auto 20px auto;
 
-    @media screen and (min-width: $breakpoint-small) and (orientation: portrait) {
+    @media screen and (min-width: $breakpoint-small) {
         margin-top: 90px;
         margin-bottom: 0;
     }
@@ -150,7 +150,7 @@
     font-size: 1em;
 
     &:focus {
-        background-color: #d2d2d2;
+        background-color: darken($text-color, 10%);
         color: $background-dark;
     }
 
