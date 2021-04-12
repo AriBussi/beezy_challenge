@@ -204,8 +204,8 @@ p {
   font-size: 1em;
 }
 .showcase__form--input:focus {
-  background-color: #9fa3a7;
-  color: white;
+  background-color: #d2d2d2;
+  color: #30448b;
 }
 @media screen and (min-width: 992px) {
   .showcase__form--input {
