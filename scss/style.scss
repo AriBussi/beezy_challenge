@@ -12,7 +12,7 @@
     top: 40px;
     display: none;
 
-    @media screen and (min-width: $breakpoint-medium) {
+    @media screen and (min-width: $breakpoint-small) {
         display: block;
     }
 }
@@ -24,8 +24,8 @@
 }
 
 .social__icon--path {
+    @include transition(fill);
     fill: $text-color;
-    transition: fill .3s;
 
     &:hover {
         fill: darken($text-color, 25%);
@@ -42,7 +42,7 @@
 
 
 
-    @media screen and (min-width: $breakpoint-medium) {
+    @media screen and (min-width: $breakpoint-small) {
         display: flex;
         justify-content: center;
         padding-top: 74px;
@@ -51,7 +51,7 @@
 
     }
 
-    @media screen and (min-width: $breakpoint-large) {
+    @media screen and (min-width: $breakpoint-medium) {
         max-height: 760px;
     }
 }
@@ -61,12 +61,12 @@
     &--desktop {
         display: none;
 
-        @media screen and (min-width: $breakpoint-medium) {
+        @media screen and (min-width: $breakpoint-small) {
             display: block;
             max-width: 30vw;
         }
 
-        @media screen and (min-width: $breakpoint-large) {
+        @media screen and (min-width: $breakpoint-medium) {
             display: block;
             max-width: unset;
         }
@@ -76,7 +76,7 @@
         display: block;
         margin: 0 auto;
 
-        @media screen and (min-width: $breakpoint-medium) {
+        @media screen and (min-width: $breakpoint-small) {
             display: none;
         }
     }
@@ -87,11 +87,15 @@
     max-width: 360px;
     margin: 0 auto;
 
-    @media screen and (min-width: $breakpoint-medium) {
+    @media screen and (min-width: $breakpoint-small) {
         max-width: 600px;
         margin: 0;
         margin-left: 8vw;
         text-align: left;
+    }
+
+    @media screen and (min-width: $breakpoint-large) {
+        margin-left: 167px;
     }
 }
 
@@ -100,7 +104,7 @@
     width: 132px;
     margin: 40px auto 20px auto;
 
-    @media screen and (min-width: $breakpoint-medium) {
+    @media screen and (min-width: $breakpoint-small) {
         margin-top: 90px;
         margin-bottom: 0;
     }
@@ -115,11 +119,11 @@
     margin: 26px auto 0 auto;
 
 
-    @media screen and (min-width: $breakpoint-medium) {
+    @media screen and (min-width: $breakpoint-small) {
         margin-left: 0;
     }
 
-    @media screen and (min-width: $breakpoint-large) {
+    @media screen and (min-width: $breakpoint-medium) {
         margin-top: 48px;
         max-width: 420px;
         height: 55px;
@@ -128,6 +132,7 @@
 }
 
 .showcase__form--input {
+    @include transition(background-color);
     display: block;
     width: 75%;
     border-top-left-radius: 8px;
@@ -142,11 +147,13 @@
     font-family: 'SegoeUI', sans-serif;
     font-size: 1em;
 
-    &:invalid {
-        outline: $accent-color;
+    &:focus {
+        background-color: #9fa3a7;
+        color: white;
     }
 
-    @media screen and (min-width: $breakpoint-large) {
+
+    @media screen and (min-width: $breakpoint-medium) {
         font-size: 1.25em;
     }
 }
@@ -162,14 +169,14 @@
     background-color: $accent-color;
     color: $text-color;
     font-family: 'SegoeUI-Bold', sans-serif;
-    letter-spacing: 2.8px;
-    font-size: 14px;
+    letter-spacing: .175em;
+    font-size: .875em;
 
     &:active {
         background-color: darken($color: $accent-color, $amount: 15%);
     }
 
-    @media screen and (min-width: $breakpoint-large) {
+    @media screen and (min-width: $breakpoint-medium) {
         min-width: 122px;
     }
 }
