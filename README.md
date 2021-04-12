@@ -5,7 +5,7 @@ HTML & CSS/SCSS code to generate the page provided, including:
 - Responsive. Mobile, tablet and desktop, resolution switching and art direction, with a mobile first approach
 - BEM methodology
 - Clean, organized code
-- Tested visually with Browserstack on windows and android, Chrome, IE11, Edge and Firefox.
+- Tested visually with Browserstack on Windows and Android, Chrome, IE11, Edge and Firefox.
 
 ## Usage
 
