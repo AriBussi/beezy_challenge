@@ -52,6 +52,10 @@ p {
   overflow: hidden;
 }
 
+.capitalized {
+  text-transform: uppercase;
+}
+
 @font-face {
   font-family: "SegoeUI";
   src: url("../assets/Segoe/Regular.woff") format("woff");
